@@ -20,6 +20,18 @@ include $(call all-subdir-makefiles,$(LOCAL_PATH))
 PRODUCT_PACKAGES += \
    Cromite
 
+# Fonts
+PRODUCT_PACKAGES += \
+    FontCantarellOverlay \
+    FontDroidSansOverlay \
+    FontGoogleSansOverlay \
+    FontInterOverlay \
+    FontRobotoOverlay \
+    FontUbuntuOverlay \
+    FontWeblySleekUIOverlay
+
+$(call inherit-product,vendor/plros/fonts/fonts.mk)
+
 # Kill GMS Font
 PRODUCT_PACKAGES += \
    killgmsfont \
