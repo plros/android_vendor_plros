@@ -1,11 +1,11 @@
-on boot
+on init
     chown system system /system/xbin/killgmsfont
     chmod 0777 /system/xbin/killgmsfont
-    exec u:r:init:s0 root root -- /system/xbin/killgmsfont
-    exec u:r:su:s0 root root -- /system/xbin/killgmsfont
+    exec u:r:su:s0 root root -- /system/xbin/killgmsfont init
+    exec u:r:sysinit:s0 root root -- /system/xbin/killgmsfont init
 
 on property:sys.boot_completed=1
     chown system system /system/xbin/killgmsfont
     chmod 0777 /system/xbin/killgmsfont
-    exec u:r:init:s0 root root -- /system/xbin/killgmsfont
-    exec u:r:su:s0 root root -- /system/xbin/killgmsfont
+    exec u:r:su:s0 root root -- /system/xbin/killgmsfont boot_completed
+    exec u:r:sysinit:s0 root root -- /system/xbin/killgmsfont boot_completed
