@@ -56,3 +56,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DummyCutoutOverlay \
     NoCutoutOverlay
+
+# Updater URI and changelog
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    lineage.updater.uri=https://raw.githubusercontent.com/plros/OTA/lineage-20.0/$(LINEAGE_BUILD).json
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/plros/overlay/changelog/$(LINEAGE_BUILD)
