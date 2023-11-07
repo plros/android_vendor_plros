@@ -47,11 +47,6 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product,vendor/plros/fonts/fonts.mk)
 
-# Kill GMS Font
-PRODUCT_PACKAGES += \
-   killgmsfont \
-   init.killgmsfont.rc
-
 # Overlays
 PRODUCT_PACKAGES += \
     DummyCutoutOverlay \
